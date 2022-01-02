@@ -1,3 +1,6 @@
+
+// Credits: alfirick opidi
+
 const SHA256 = require("crypto-js/sha256");
 class CryptoBlock {
   constructor(index, timestamp, data, precedingHash = " ") {
@@ -62,18 +65,18 @@ class CryptoBlockchain {
   }
 }
 
-let smashingCoin = new CryptoBlockchain();
+let NodeCrypto = new CryptoBlockchain();
 
-console.log("smashingCoin mining in progress....");
-smashingCoin.addNewBlock(
+console.log("NodeCrypto coin mining in progress....");
+NodeCrypto.addNewBlock(
   new CryptoBlock(1, "01/06/2020", {
-    sender: "Iris Ljesnjanin",
-    recipient: "Cosima Mielke",
+    sender: "Bishal Kharal",
+    recipient: "Elon Musk",
     quantity: 50
   })
 );
 
-smashingCoin.addNewBlock(
+NodeCrypto.addNewBlock(
   new CryptoBlock(2, "01/07/2020", {
     sender: "Vitaly Friedman",
     recipient: "Ricardo Gimenes",
@@ -81,5 +84,5 @@ smashingCoin.addNewBlock(
   })
 );
 
-console.log(JSON.stringify(smashingCoin, null, 4));
+console.log(JSON.stringify(NodeCrypto, null, 4));
 
